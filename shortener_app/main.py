@@ -87,3 +87,8 @@ def delete_url(secret_key: str, request: Request, db: Session = Depends(get_db))
         return {"detail": message}
     else:
         raise HTTPException(status_code=404, detail=f"Url {request.url} not found")
+
+
+# TODO: Custom URL key: Let your users create custom URL keys instead of a random string.
+# TODO: Peek URL: Create an endpoint for your users to check which target URL is behind a shortened URL.
+# TODO: Graceful Forward: Check if the website exists before forwarding.
